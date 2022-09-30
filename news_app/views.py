@@ -38,7 +38,7 @@ def getIndianNews(request):
         for i in data:
             dataDict = dict()
             dataDict["title"] = i.h2.a.text
-            dataDict["image"] = i.div.a.img["src"]
+            dataDict["image"] = i.div.a.img["data-lazy-src"]
             dataDict["body"] = i.p.text
             dataArr.append(dataDict)
     return Response(dataArr, 200)
@@ -58,7 +58,7 @@ def getEducationNews(request):
         for i in data:
             dataDict = dict()
             dataDict["title"] = i.h2.a.text
-            dataDict["image"] = i.div.a.img["src"]
+            dataDict["image"] = i.div.a.img["data-lazy-src"]
             dataDict["body"] = i.p.text
             dataArr.append(dataDict)
     return Response(dataArr, 200)
@@ -78,7 +78,7 @@ def getPoliticalNews(request):
         for i in data:
             dataDict = dict()
             dataDict["title"] = i.h2.a.text
-            dataDict["image"] = i.div.a.img["src"]
+            dataDict["image"] = i.div.a.img["data-lazy-src"]
             dataDict["body"] = i.p.text
             dataArr.append(dataDict)
     return Response(dataArr, 200)
@@ -98,7 +98,7 @@ def getCitiesNews(request):
         for i in data:
             dataDict = dict()
             dataDict["title"] = i.h2.a.text
-            dataDict["image"] = i.div.a.img["src"]
+            dataDict["image"] = i.div.a.img["data-lazy-src"]
             dataDict["body"] = i.p.text
             dataArr.append(dataDict)
     return Response(dataArr, 200)
