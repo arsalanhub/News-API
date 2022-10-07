@@ -6,6 +6,7 @@ import urllib.request
 @decorators.api_view(['GET'])   
 @decorators.permission_classes([permissions.AllowAny])
 def getEntertainmentNews(request):
+    print("yes")
     dataArr = []
     for pageNumber in range(1, 3, 1):
         response = urllib.request.urlopen("https://indianexpress.com/section/entertainment/page/{}/".format(pageNumber))
