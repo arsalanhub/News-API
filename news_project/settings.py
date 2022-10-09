@@ -26,10 +26,7 @@ SECRET_KEY = 'django-insecure-bz+(7027by7p7g3jozc@j$8tgk133ff3f!e18p+#!nopt5-y^h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["news-api-97mk.onrender.com/", "127.0.0.1", "https://news-api-97mk.onrender.com/api/", 
-                 "https://news-api-97mk.onrender.com/", "https://news-api-97mk.onrender.com", "https://news-api-97mk.onrender.com/api",
-                 "news-api-97mk.onrender.com", "news-api-97mk.onrender", "https://news-api-97mk.onrender.com/api/cities",
-                 "https://news-api-97mk.onrender.com/api/cities/"]
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -45,6 +42,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -52,9 +50,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
+CORS_ORIGIN_ALLOW_ALL = True
 ROOT_URLCONF = 'news_project.urls'
 
 TEMPLATES = [
@@ -128,4 +126,3 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# CORS_ORIGIN_ALLOW_ALL = True
