@@ -28,7 +28,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["news-api-97mk.onrender.com/", "127.0.0.1", "https://news-api-97mk.onrender.com/api/", 
                  "https://news-api-97mk.onrender.com/", "https://news-api-97mk.onrender.com", "https://news-api-97mk.onrender.com/api",
-                 "news-api-97mk.onrender.com", "news-api-97mk.onrender"]
+                 "news-api-97mk.onrender.com", "news-api-97mk.onrender", "https://news-api-97mk.onrender.com/api/cities",
+                 "https://news-api-97mk.onrender.com/api/cities/"]
 
 # Application definition
 
