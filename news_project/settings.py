@@ -26,8 +26,7 @@ SECRET_KEY = 'django-insecure-bz+(7027by7p7g3jozc@j$8tgk133ff3f!e18p+#!nopt5-y^h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
-
+ALLOWED_HOSTS = ["news-api-97mk.onrender.com", "127.0.0.1"]
 
 # Application definition
 
@@ -126,5 +125,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-ALLOWED_HOSTS=['*']
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
